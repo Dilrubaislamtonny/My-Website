@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .fade-in.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-600 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between">
+            <h1 class="text-white text-2xl font-bold">My Portfolio</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#about" class="text-white">About</a></li>
+                <li><a href="#skills" class="text-white">Skills</a></li>
+                <li><a href="#projects" class="text-white">Projects</a></li>
+                <li><a href="#contact" class="text-white">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="bg-blue-500 text-white h-screen flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold mb-4">Hi, I'm Dilruba Islam</h1>
+            <p class="text-xl">Aspiring Developer | Passionate about Web Development</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">About Me</h2>
+            <p class="text-gray-600 text-lg">I'm a software engineer passionate about building web applications and learning new technologies. Although I have no Java development experience, I am eager to explore and grow in various software development fields.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Skills</h2>
+            <div class="flex justify-center space-x-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">HTML & CSS</h3>
+                    <p class="text-gray-600 mt-2">Experienced in building responsive websites.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">JavaScript</h3>
+                    <p class="text-gray-600 mt-2">Comfortable with modern JavaScript and frameworks.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">Tailwind CSS</h3>
+                    <p class="text-gray-600 mt-2">Skilled in creating clean UI designs with Tailwind CSS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">Portfolio Website</h3>
+                    <p class="text-gray-600 mt-2">A simple personal portfolio showcasing my skills and projects.</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">Weather App</h3>
+                    <p class="text-gray-600 mt-2">A weather app that displays real-time data using APIs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+            <p class="text-gray-600 text-lg mb-4">Let's connect! Feel free to reach out for any collaboration or project inquiries.</p>
+            <button onclick="showContactForm()" class="bg-blue-500 text-white px-6 py-3 rounded-lg">Contact Me</button>
+        </div>
+    </section>
+
+    <!-- Contact Form Modal -->
+    <div id="contactForm" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-4">Get in Touch</h3>
+            <form>
+                <input type="text" placeholder="Your Name" class="w-full mb-4 p-3 border rounded-lg">
+                <input type="email" placeholder="Your Email" class="w-full mb-4 p-3 border rounded-lg">
+                <textarea placeholder="Your Message" class="w-full mb-4 p-3 border rounded-lg"></textarea>
+                <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded-lg">Send Message</button>
+            </form>
+            <button onclick="hideContactForm()" class="mt-4 text-gray-500">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function showContactForm() {
+            document.getElementById('contactForm').classList.remove('hidden');
+        }
+        function hideContactForm() {
+            document.getElementById('contactForm').classList.add('hidden');
+        }
+    </script>
+
+</body>
+</html>
